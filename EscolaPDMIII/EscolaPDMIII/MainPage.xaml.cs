@@ -12,6 +12,8 @@ namespace EscolaPDMIII
         public MainPage()
         {
             InitializeComponent();
+            Core.JsonDecode json = new Core.JsonDecode();
+            json.start_get();
         }
     }
 }

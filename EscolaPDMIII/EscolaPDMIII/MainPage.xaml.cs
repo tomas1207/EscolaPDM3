@@ -15,9 +15,9 @@ namespace EscolaPDMIII
          
 
             InitializeComponent();
-            Core.JsonDecode json = new Core.JsonDecode();
+           Core.JsonDecode json = new Core.JsonDecode();
 
-           Core.alunos alunos = json.jsonalunos("http://tomasfernandes.pt/Rest/example/alunos");
+           json.jsonalunos("http://tomasfernandes.pt/Rest/example/alunos");
           
            
 
@@ -32,7 +32,7 @@ namespace EscolaPDMIII
         async void login()
         {
             Core.PostonServer poston = new Core.PostonServer();
-            Task<string> test = poston.PostData("Tomasfernandes@gmail.com", "ola", "ROOT", "loginpdm");
+            var test = poston.PostData("Tomasfernandes@gmail.com", "ola", "ROOT", "loginpdm");
             var result = await test;
         }
     }

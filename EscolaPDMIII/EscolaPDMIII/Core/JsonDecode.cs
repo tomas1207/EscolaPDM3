@@ -10,16 +10,25 @@ namespace EscolaPDMIII.Core
 {
     class JsonDecode
     {
-       
-        public alunos jsonalunos(string link)
+
+        public void jsonalunos(string link)
         {
             using (var webClient = new System.Net.WebClient())
             {
                 var json = webClient.DownloadString(link);
-                JObject alunosRoot = JObject.Parse(link);
-                alunos alunosjson = JsonConvert.DeserializeObject<alunos>(link);
-                
-                return alunosjson;
+
+                var result = JsonConvert.DeserializeObject<dynamic>(json);
+
+                JObject joResponse = JObject.Parse(json);
+             
+                JArray array = (JArray)joResponse["Alunos"];
+                int lenght = array.Count();
+                for(int i = 0; i < lenght; i++)
+                {
+                    string statu = array[i]["id"].ToString();
+                }
+          
+
             }
         }
     }

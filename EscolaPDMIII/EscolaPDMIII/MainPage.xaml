@@ -4,11 +4,40 @@
              xmlns:local="clr-namespace:EscolaPDMIII"
              x:Class="EscolaPDMIII.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.ToolbarItems>
+        
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <RelativeLayout
+            BackgroundColor="DarkSlateBlue">
+
+            <Image Source="C:\Users\pablo\Documents\ISTECManagment.png"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=.5,Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.0}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25, Constant=0}"/>
+
+            <Entry x:Name="usernameEntry" Placeholder="username"  
+                   
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.36}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.125, Constant=0}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"/>
+            
+                        
+            <Entry x:Name="passwordEntry" IsPassword="true" Placeholder="password" 
+                   
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.44}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.125, Constant=0}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"/>
+            
+            <Button Text="Login" Clicked="OnLoginButtonClicked" BackgroundColor="Beige" TextColor="Black"
+                    
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.55}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.0, Constant=0}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1,Constant=0}"/>
+            
+            <Label x:Name="messageLabel" />
+        </RelativeLayout>
+    </ContentPage.Content>
 
 </ContentPage>

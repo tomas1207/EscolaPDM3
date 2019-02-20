@@ -14,7 +14,14 @@ namespace EscolaPDMIII
         {
             InitializeComponent();
             Core.JsonDecode json = new Core.JsonDecode();
-       
+            login();
+            
+        }
+        async void login()
+        {
+            Core.PostonServer poston = new Core.PostonServer();
+            Task<string> test = poston.PostData("Tomasfernandes@gmail.com", "ola", "ROOT", "loginpdm");
+            var result = await test;
         }
     }
 }

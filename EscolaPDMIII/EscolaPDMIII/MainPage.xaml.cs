@@ -14,8 +14,10 @@ namespace EscolaPDMIII
         {
             InitializeComponent();
             Core.JsonDecode json = new Core.JsonDecode();
-            login();
-            
+
+           Core.alunos alunos = json.jsonalunos("http://tomasfernandes.pt/Rest/example/alunos");
+          
+           
         }
         async void login()
         {

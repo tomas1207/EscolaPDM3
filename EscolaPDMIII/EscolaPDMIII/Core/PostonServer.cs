@@ -14,12 +14,12 @@ namespace EscolaPDMIII.Core
         public async Task<string> PostData(string username, string password, string role, string extensonLink)
         {
             string url = extensonLink;
-            var dados = new List<KeyValuePair<string, string>>();
+            var dados = new Dictionary<string, string>
             {
-                new KeyValuePair<string, string>("email", username);
-                new KeyValuePair<string, string>("password", password);
-                new KeyValuePair<string, string>("role", role);
-            }
+                {"email",username },
+                {"password",password },
+                {"role",role }
+            };
             var content = new FormUrlEncodedContent(dados);
             var response = await client.PostAsync("http://www.tomasfernandes.pt/Rest/example/" + url, content);
             var responseString = await response.Content.ReadAsStringAsync();

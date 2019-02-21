@@ -11,16 +11,17 @@ namespace EscolaPDMIII.Core
     class JsonDecode
     {
        
-        public alunos jsonalunos(string link)
-        {
-            using (var webClient = new System.Net.WebClient())
-            {
-                var json = webClient.DownloadString(link);
-                JObject alunosRoot = JObject.Parse(link);
-                alunos alunosjson = JsonConvert.DeserializeObject<alunos>(link);
+        //public alunos jsonalunos(string link)
+        //{
+        //   // using (var webClient = new System.Net.WebClient())
+        //   //{
+        //   //     var json = webClient.DownloadString(link);
+        //   //     JObject alunosRoot = JObject.Parse(link);
+        //   //     alunos alunosjson = JsonConvert.DeserializeObject<alunos>(link);
+
                 
-                return alunosjson;
-            }
-        }
+        //   //     return alunosjson;
+        //   // }
+        //}
     }
 }

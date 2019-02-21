@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,21 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace EscolaPDMIII
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MarcarExame : ContentPage
+	public partial class ConsultarNotas : ContentPage
 	{
-		public MarcarExame ()
+		public ConsultarNotas ()
 		{
 			InitializeComponent ();
+            ObservableCollection<ConsultarNotas> listaNotas = new ObservableCollection<ConsultarNotas>();
 		}
-
-        private void OnDateSelected(object sender, DateChangedEventArgs e)
-        {
-
-        }
-
-        private void OnMarcarExameButtonClicked(object sender, EventArgs e)
-        {
-
-        }
-    }
+	}
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Net.Http;
 
+
 namespace EscolaPDMIII
 {
     public partial class MainPage : ContentPage
@@ -15,7 +16,7 @@ namespace EscolaPDMIII
          
 
             InitializeComponent();
-           // Core.JsonDecode json = new Core.JsonDecode();
+           Core.JsonDecode json = new Core.JsonDecode();
 
             json.jsonalunos("http://tomasfernandes.pt/Rest/example/alunos");
             json.jsondisciplinas("http://tomasfernandes.pt/Rest/example/disciplinas");
@@ -30,15 +31,21 @@ namespace EscolaPDMIII
         }
 
 
-        private void OnLoginButtonClicked(object sender, EventArgs e)
+        async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-           
+            await Navigation.PushAsync(new MainPage2());
         }
-        async void login()
+        async void addlogin()
         {
             Core.PostonServer poston = new Core.PostonServer();
             var test = poston.PostData("Tomasfernandes@gmail.com", "ola", "ROOT", "loginpdm");
             var result = await test;
+
+        }
+        async void login(string email,string pass){
+            Core.PostonServer poston = new Core.PostonServer();
+            var login = poston.PostLogin(email, pass, "loginREST");
+            var result = await login;
         }
     }
 }

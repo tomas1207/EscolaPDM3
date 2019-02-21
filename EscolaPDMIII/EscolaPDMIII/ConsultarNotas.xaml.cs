@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using EscolaPDMIII.Models;
+
+using System.Collections;
 
 namespace EscolaPDMIII
 {
@@ -15,8 +18,14 @@ namespace EscolaPDMIII
 	{
 		public ConsultarNotas ()
 		{
+
 			InitializeComponent ();
-            ObservableCollection<ConsultarNotas> listaNotas = new ObservableCollection<ConsultarNotas>();
-		}
+            //BindingContext = new NotasViewModel ();
+            ArrayList ListNotas = new ArrayList();
+            ListNotas = Core.GlogalVar.notaexames;
+             
+
+    }
+       
 	}
 }

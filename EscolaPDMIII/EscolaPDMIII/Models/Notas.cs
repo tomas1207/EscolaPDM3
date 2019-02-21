@@ -4,7 +4,10 @@ using System.Text;
 
 namespace EscolaPDMIII.Models
 {
-    class Notas
+    public class Notas
     {
+        public int nota { get; set; }
+        public String NomeCadeira { get; set; }
+        
     }
 }

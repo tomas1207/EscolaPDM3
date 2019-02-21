@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EscolaPDMIII.ConsultarNotas">
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding listaNotas}">
+        <ListView ItemsSource="{Binding ListNotas}"
+                  HasUnevenRows="True"
+                  SeparatorVisibility="None"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand">
             
             
         </ListView>

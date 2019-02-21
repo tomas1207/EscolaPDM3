@@ -18,7 +18,7 @@ namespace EscolaPDMIII
            Core.JsonDecode json = new Core.JsonDecode();
 
            json.jsonalunos("http://tomasfernandes.pt/Rest/example/alunos");
-          
+            json.jsondisciplinas("http://tomasfernandes.pt/Rest/example/disciplinas");
            
 
             

@@ -11,6 +11,7 @@ namespace EscolaPDMIII.Core
 {
     class JsonDecode
     {
+        
 
         public void jsonalunos(string link)
         {
@@ -24,15 +25,15 @@ namespace EscolaPDMIII.Core
                 int lenght = array.Count();
                 for(int i = 0; i < lenght; i++)
                 {
-                    string id = array[i]["id"].ToString();
-                    string nome = array[i]["nome"].ToString();
-                    string turma = array[i]["turma"].ToString();
-                    string curso = array[i]["curso"].ToString();
-                    string idade = array[i]["idade"].ToString();
-                    string telefone = array[i]["telefone"].ToString();
-                    string morada = array[i]["morada"].ToString();
-                    string bi = array[i]["bi"].ToString();
-                    string login_id = array[i]["login_id"].ToString();
+                    GlogalVar.id.Add(array[i]["id"]);
+                    GlogalVar.nome.Add(array[i]["nome"]);
+                    GlogalVar.turma.Add(array[i]["turma"]);
+                    GlogalVar.curso.Add(array[i]["curso"]);
+                    GlogalVar.idade.Add(array[i]["idade"]);
+                    GlogalVar.telefone.Add(array[i]["telefone"]);
+                    GlogalVar.morada.Add(array[i]["morada"]);
+                    GlogalVar.bi.Add( array[i]["bi"]);
+                    GlogalVar.login_id.Add( array[i]["login_id"]);
                 }
 
 
@@ -50,10 +51,10 @@ namespace EscolaPDMIII.Core
                 int lenght = array.Count();
                 for (int i = 0; i < lenght; i++)
                 {
-                    string id = array[i]["id"].ToString();
-                    string disciplina = array[i]["disciplina"].ToString();
-                    string professor = array[i]["professor"].ToString();
-                    string data = array[i]["data"].ToString();
+                    GlogalVar.idhorarios.Add(array[i]["id"]);
+                    GlogalVar.disciplinahorarios.Add(array[i]["disciplina"]);
+                    GlogalVar.professorhorarios.Add(array[i]["professor"]);
+                    GlogalVar.datahorarios.Add( array[i]["data"]);
                 }
 
 
@@ -67,15 +68,15 @@ namespace EscolaPDMIII.Core
 
                 JObject joResponse = JObject.Parse(json);
 
-                JArray array = (JArray)joResponse["Horarios"];
+                JArray array = (JArray)joResponse["exames"];
                 int lenght = array.Count();
                 for (int i = 0; i < lenght; i++)
                 {
-                    string id = array[i]["id"].ToString();
-                    string aluno_id = array[i]["aluno_id"].ToString();
-                    string nota = array[i]["nota"].ToString();
-                    string disciplina = array[i]["disciplina"].ToString();
-                    string data = array[i]["data"].ToString();
+                    GlogalVar.idexames.Add(array[i]["id"]);
+                    GlogalVar.aluno_idexames.Add(array[i]["aluno_id"]);
+                    GlogalVar.notaexames.Add(array[i]["nota"]);
+                    GlogalVar.disciplinaexames.Add(array[i]["disciplina"]);
+                    GlogalVar.dataexames.Add(array[i]["data"]);
                 }
             }
         }
@@ -83,29 +84,64 @@ namespace EscolaPDMIII.Core
         {
             using (var webClient = new System.Net.WebClient())
             {
-                var json = webClient.DownloadString(link);
+                string json = webClient.DownloadString(link);
 
                 JObject joResponse = JObject.Parse(json);
 
-                JArray array = (JArray)joResponse["Horarios"];
+                JArray array = (JArray)joResponse["professores"];
                 int lenght = array.Count();
-                ArrayList id = new ArrayList();
-                ArrayList nome = new ArrayList();
-                ArrayList morada = new ArrayList();
-                ArrayList telefone = new ArrayList();
-                ArrayList bi = new ArrayList();
-                ArrayList disciplinas_id = new ArrayList();
-                ArrayList login_id = new ArrayList();
+                
                 for (int i = 0; i < lenght; i++)
                 {
-                     id.Add(array[i]["id"].ToString());
-                     nome.Add (array[i]["nome"].ToString());
-                     morada.Add(array[i]["morada"].ToString());
-                     telefone.Add(array[i]["telefone"].ToString());
-                     bi.Add(array[i]["bi"].ToString());
-                     disciplinas_id.Add(array[i]["disciplinas_id"].ToString());
-                     login_id.Add(array[i]["login_id"].ToString());
+                    GlogalVar.idprofessor.Add(array[i]["id"]);
+                    GlogalVar.nomeprofessor.Add (array[i]["nome"]);
+                    GlogalVar.moradaprofessor.Add(array[i]["morada"]);
+                    GlogalVar.telefoneprofessor.Add(array[i]["telefone"]);
+                    GlogalVar.biprofessor.Add(array[i]["bi"]);
+                    GlogalVar.disciplinas_idprofessor.Add(array[i]["disciplinas_id"]);
+                    GlogalVar.login_idprofessor.Add(array[i]["login_id"]);
 
+                }
+            }
+        }
+        public void jsonpropinas(string link)
+        {
+            using (var webClient = new System.Net.WebClient())
+            {
+                string json = webClient.DownloadString(link);
+
+                JObject joResponse = JObject.Parse(json);
+
+                JArray array = (JArray)joResponse["propinas"];
+                int lenght = array.Count();
+
+                for (int i = 0; i < lenght; i++)
+                {
+                    GlogalVar.idpropinas.Add(array[i]["id"]);
+                    GlogalVar.pagopropinas.Add(array[i]["pago"]);
+                    GlogalVar.aluno_idpropina.Add(array[i]["aluno_id"]);
+                    GlogalVar.mespropina.Add(array[i]["mes"]);
+
+                }
+            }
+        }
+        public void jsondisciplinas(string link)
+        {
+            using (var webClient = new System.Net.WebClient())
+            {
+                string json = webClient.DownloadString(link);
+
+                JObject joResponse = JObject.Parse(json);
+
+                JArray array = (JArray)joResponse["disciplinas"];
+                int lenght = array.Count();
+
+                for (int i = 0; i < lenght; i++)
+                {
+                    GlogalVar.iddisciplina.Add(array[i]["id"]);
+                    GlogalVar.nomedisciplina.Add(array[i]["nome"]);
+                    GlogalVar.horasdisciplina.Add(array[i]["nota"]);
+                    GlogalVar.aluno_iddisciplina.Add(array[i]["aluno_id"]);
                 }
             }
         }

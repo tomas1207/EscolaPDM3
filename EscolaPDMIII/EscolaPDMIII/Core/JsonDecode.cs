@@ -88,7 +88,7 @@ namespace EscolaPDMIII.Core
 
                 JObject joResponse = JObject.Parse(json);
 
-                JArray array = (JArray)joResponse["professores"];
+                JArray array = (JArray)joResponse["professor"];
                 int lenght = array.Count();
                 
                 for (int i = 0; i < lenght; i++)

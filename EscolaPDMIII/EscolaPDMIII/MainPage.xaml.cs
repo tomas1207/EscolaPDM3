@@ -15,14 +15,18 @@ namespace EscolaPDMIII
          
 
             InitializeComponent();
-           Core.JsonDecode json = new Core.JsonDecode();
+            Core.JsonDecode json = new Core.JsonDecode();
 
-           json.jsonalunos("http://tomasfernandes.pt/Rest/example/alunos");
+            json.jsonalunos("http://tomasfernandes.pt/Rest/example/alunos");
             json.jsondisciplinas("http://tomasfernandes.pt/Rest/example/disciplinas");
-           
+            json.jsonexames("http://tomasfernandes.pt/Rest/example/exames");
+            json.jsonhorarios("http://tomasfernandes.pt/Rest/example/horarios");
+            json.jsonprofessores("http://tomasfernandes.pt/Rest/example/professores");
+            json.jsonpropinas("http://tomasfernandes.pt/Rest/example/propinas");
 
-            
-          }
+
+
+        }
 
 
         private void OnLoginButtonClicked(object sender, EventArgs e)

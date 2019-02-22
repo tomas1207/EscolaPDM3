@@ -19,7 +19,10 @@ namespace EscolaPDMIII.MyDataSource
         {
             List<Cadeira> cadeiras = new List<Cadeira>()
             {
-                //DATA
+               new Cadeira () {Disciplina="PDMIII",Calificacion=13},
+               new Cadeira () {Disciplina="Historia",Calificacion=17},
+               new Cadeira () {Disciplina="Português",Calificacion=4},
+               new Cadeira () {Disciplina="Matemática",Calificacion=12}
             };
             return cadeiras;
         }

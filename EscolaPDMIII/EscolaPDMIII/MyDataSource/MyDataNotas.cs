@@ -17,7 +17,10 @@ namespace EscolaPDMIII.MyDataSource
         {
             List<Nota> notas = new List<Nota>()
             {
-                //DATA
+               new Nota(){Disciplina ="Matematica",CalificacionFinal = 20},
+              new Nota(){Disciplina ="Portugues",CalificacionFinal = 20},
+              new Nota(){Disciplina ="Historia",CalificacionFinal = 20},
+              new Nota(){Disciplina ="PDMIII",CalificacionFinal = 20}
             };
             return notas;
         }

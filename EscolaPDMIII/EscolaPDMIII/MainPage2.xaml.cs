@@ -20,27 +20,27 @@ namespace EscolaPDMIII
 
         async void ConsultarHorarios_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ConsultarHorarios());
         }
 
         async void ConsultarUltimasNotas_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ConsultarNotas());
         }
 
         async void ConsultarCurriculoAcademico_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ConsultarHorarios());
         }
 
         async void ConsultarPropinas_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ConsultarPropinas());
         }
 
         async void ConsultarCalendario_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new CalendarioExames());
         }
     }
 }

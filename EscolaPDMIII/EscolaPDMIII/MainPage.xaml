@@ -12,7 +12,8 @@
             BackgroundColor="DarkSlateBlue"
             Opacity="60">
 
-            <Image Source="ISTECManagment.png"
+            <Image Source="Resources/managment.png"
+                   x:Name="managment"
                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=.5,Constant=0}"
                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.0}"

@@ -18,14 +18,14 @@ namespace EscolaPDMIII
 		}
 
 
-        private void MarcarExame_Clicked(object sender, EventArgs e)
+        async void MarcarExame_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new MarcarExame());
         }
 
-        private void ConsultarHorario_Clicked(object sender, EventArgs e)
+        async void ConsultarHorario_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new ConsultarHorarios()); //é precisso mudar para consultarhorario_prof
         }
 
         private void Calificar_Clicked(object sender, EventArgs e)

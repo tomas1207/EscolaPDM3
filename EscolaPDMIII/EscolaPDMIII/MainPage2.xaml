@@ -5,7 +5,9 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="DarkSlateBlue"
                      Opacity="60">
-            <BoxView >
+            <BoxView HorizontalOptions="StartAndExpand"
+                     VerticalOptions="Start"
+                     HeightRequest="30">
                 
             </BoxView>
             <Button Text="Consultar Calendario"

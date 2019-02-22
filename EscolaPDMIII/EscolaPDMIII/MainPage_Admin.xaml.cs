@@ -22,9 +22,6 @@ namespace EscolaPDMIII
 
         }
 
-        async void ApagarUser_Clicked(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

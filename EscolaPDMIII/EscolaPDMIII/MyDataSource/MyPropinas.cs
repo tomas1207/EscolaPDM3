@@ -17,7 +17,10 @@ namespace EscolaPDMIII.MyDataSource
         {
             List<Propina> propinas = new List<Propina>()
             {
-                //DATA
+              new Propina(){Mes ="Jan",Pago = true},
+              new Propina(){Mes ="Fev",Pago = false},
+              new Propina(){Mes ="Mar",Pago = false},
+              new Propina(){Mes ="Dez",Pago = true},
             };
             return propinas;
         }

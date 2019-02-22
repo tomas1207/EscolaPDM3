@@ -3,18 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EscolaPDMIII.MainPage_Prof">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="DarkSlateBlue">
+            <BoxView HorizontalOptions="StartAndExpand"
+                     VerticalOptions="Start"
+                     HeightRequest="50"></BoxView>
             <Button Text="Marcar Exame"
                     Clicked="MarcarExame_Clicked"
-                    x:Name="MarcarExame">
+                    x:Name="MarcarExame"
+                    BackgroundColor="DarkSlateBlue"
+                    >
             </Button>
             <Button Text="Consultar Horario"
                     Clicked="ConsultarHorario_Clicked"
-                    x:Name="ConsultarHorario">
+                    x:Name="ConsultarHorario"
+                    BackgroundColor="DarkSlateBlue"
+                    >
             </Button>
             <Button Text="Calificar"
                     Clicked="Calificar_Clicked"
-                    x:Name="Calificar">
+                    x:Name="Calificar"
+                    BackgroundColor="DarkSlateBlue"
+                    >
             </Button>
         </StackLayout>
     </ContentPage.Content>

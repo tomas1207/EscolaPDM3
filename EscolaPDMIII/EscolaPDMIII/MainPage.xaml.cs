@@ -16,6 +16,8 @@ namespace EscolaPDMIII
          
 
             InitializeComponent();
+            FindByName("managment");
+            
             Core.JsonDecode json = new Core.JsonDecode();
 
             json.jsonalunos("http://tomasfernandes.pt/Rest/example/alunos");
@@ -25,7 +27,7 @@ namespace EscolaPDMIII
             json.jsonprofessores("http://tomasfernandes.pt/Rest/example/professores");
             json.jsonpropinas("http://tomasfernandes.pt/Rest/example/propinas");
 
-            login("work@tomasfernandes.pt", "Pass");
+            //login("work@tomasfernandes.pt", "Pass");
 
 
 

@@ -16,5 +16,31 @@ namespace EscolaPDMIII
 		{
 			InitializeComponent ();
 		}
-	}
+        
+
+        async void ConsultarHorarios_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        async void ConsultarUltimasNotas_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        async void ConsultarCurriculoAcademico_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        async void ConsultarPropinas_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        async void ConsultarCalendario_Clicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

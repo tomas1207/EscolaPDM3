@@ -4,9 +4,21 @@
              x:Class="EscolaPDMIII.ConsultarPropinas">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Consultar Propinas">
+
+            </Label>
+            <ListView x:Name="listaPropinas">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                            Detail="{Binding Pago}"
+                            Text="{Binding Mes}">
+
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

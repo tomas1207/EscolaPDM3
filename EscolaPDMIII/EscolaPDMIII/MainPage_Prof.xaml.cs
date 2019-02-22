@@ -17,7 +17,18 @@ namespace EscolaPDMIII
 			InitializeComponent ();
 		}
 
-        private void ConsultarCalendario_Clicked()
+
+        private void MarcarExame_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConsultarHorario_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Calificar_Clicked(object sender, EventArgs e)
         {
 
         }

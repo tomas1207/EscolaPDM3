@@ -4,9 +4,13 @@
              x:Class="EscolaPDMIII.ConsultarHorarios">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
+            <Label Text="Consultar horarios"
+                VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Label Text="Consulte os seus horarios aqui"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="Start" />
+            <Image Source="horario.png"></Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

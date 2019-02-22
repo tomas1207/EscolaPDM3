@@ -4,9 +4,20 @@
              x:Class="EscolaPDMIII.CalendarioExames">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Welcome to Xamarin.Forms!">
+                
+            </Label>
+            <ListView x:Name="listaExames">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                            Detail="{Binding Data}"
+                            Text="{Binding Disciplina}">
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

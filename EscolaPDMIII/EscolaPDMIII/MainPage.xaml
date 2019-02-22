@@ -9,9 +9,10 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <RelativeLayout
-            BackgroundColor="DarkSlateBlue">
+            BackgroundColor="DarkSlateBlue"
+            Opacity="60">
 
-            <Image Source="C:\Users\pablo\Documents\ISTECManagment.png"
+            <Image Source="ISTECManagment.png"
                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=.5,Constant=0}"
                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.0}"
@@ -30,7 +31,7 @@
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.125, Constant=0}"
                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"/>
             
-            <Button Text="Login" Clicked="OnLoginButtonClicked" BackgroundColor="Beige" TextColor="Black"
+            <Button Text="Login" Clicked="OnLoginButtonClicked" BackgroundColor="DarkSlateBlue" TextColor="Black" Opacity="60"
                     
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.55}"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.0, Constant=0}"

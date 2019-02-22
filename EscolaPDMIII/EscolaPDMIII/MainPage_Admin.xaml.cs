@@ -17,7 +17,12 @@ namespace EscolaPDMIII
 			InitializeComponent ();
 		}
 
-        private void RegistrarUser_Clicked()
+        async void RegistrarUser_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        async void ApagarUser_Clicked(object sender, EventArgs e)
         {
 
         }

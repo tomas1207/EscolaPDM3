@@ -3,13 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EscolaPDMIII.ConsultarNotas">
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding ListNotas}"
-                  HasUnevenRows="True"
-                  SeparatorVisibility="None"
-                  HorizontalOptions="FillAndExpand"
-                  VerticalOptions="FillAndExpand">
-            
-            
-        </ListView>
+        <StackLayout>
+            <Label Text="Consultar Notas">
+
+            </Label>
+            <ListView x:Name="listaNotas">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                            Detail="{Binding Calificacion}"
+                            Text="{Binding Disciplina}">
+
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

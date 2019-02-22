@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using EscolaPDMIII.Models;
+using EscolaPDMIII.MyDataSource;
 
 using System.Collections;
 
@@ -16,16 +17,17 @@ namespace EscolaPDMIII
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ConsultarNotas : ContentPage
 	{
-		public ConsultarNotas ()
+        NotaView notaView;
+        public ConsultarNotas ()
 		{
 
-			InitializeComponent ();
-            //BindingContext = new NotasViewModel ();
-            ArrayList ListNotas = new ArrayList();
-            ListNotas = Core.GlogalVar.notaexames;
-             
+			InitializeComponent();
+            notaView = new NotaView();
+            FindByName("listaNotas");
+            listaNotas.ItemsSource = notaView.Notas;
 
-    }
+
+        }
        
 	}
 }

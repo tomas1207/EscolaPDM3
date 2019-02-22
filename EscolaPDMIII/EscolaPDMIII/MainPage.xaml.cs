@@ -34,7 +34,7 @@ namespace EscolaPDMIII
 
         async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage2());
+            login(usernameEntry.ToString(), passwordEntry.ToString());
         }
         async void addlogin()
         {
@@ -50,18 +50,18 @@ namespace EscolaPDMIII
             var result = await login;
             if (result == "Aluno")
             {
-
+                await Navigation.PushAsync(new MainPage2());
             }
             else if(result == "Login Errado")
             {
                 //LOGIN ERRADO
             }else if(result == "ROOT")
             {
-                //ADMIM
+                await Navigation.PushAsync(new MainPage_Admin());
             }
             else
             {
-
+                await Navigation.PushAsync(new MainPage_Prof());
             }
         }
     }

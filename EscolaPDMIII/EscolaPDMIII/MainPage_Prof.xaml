@@ -4,9 +4,18 @@
              x:Class="EscolaPDMIII.MainPage_Prof">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Marcar Exame"
+                    Clicked="MarcarExame_Clicked"
+                    x:Name="MarcarExame">
+            </Button>
+            <Button Text="Consultar Horario"
+                    Clicked="ConsultarHorario_Clicked"
+                    x:Name="ConsultarHorario">
+            </Button>
+            <Button Text="Calificar"
+                    Clicked="Calificar_Clicked"
+                    x:Name="Calificar">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

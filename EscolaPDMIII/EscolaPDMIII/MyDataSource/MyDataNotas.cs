@@ -6,17 +6,31 @@ using System.Text;
 using EscolaPDMIII.Models;
 namespace EscolaPDMIII.MyDataSource
 {
-    class MyDataNotas
+    public class Nota
     {
-        public void arraylisttolist()
-        {
-            Array cenas = Core.GlogalVar.notaexames.ToArray();
-            string cenas2 = cenas.ToString();
-            ListNotas = Core.GlogalVar.notaexames;
-            
-        }
-        public ArrayList ListNotas = new ArrayList();
 
-        
+        public string Disciplina { get; set; }
+        public int CalificacionFinal { get; set; }
+
+
+        public List<Nota> GetNotas()
+        {
+            List<Nota> notas = new List<Nota>()
+            {
+                //DATA
+            };
+            return notas;
+        }
+
+
+    };
+
+    public class NotaView
+    {
+        public List<Nota> Notas { get; set; }
+        public NotaView() //constructor
+        {
+            Notas = new Nota().GetNotas();
+        }
     }
 }

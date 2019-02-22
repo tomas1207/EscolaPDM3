@@ -3,10 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EscolaPDMIII.MainPage2">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="DarkSlateBlue"
+                     Opacity="60">
+            <BoxView >
+                
+            </BoxView>
+            <Button Text="Consultar Calendario"
+                    Clicked="ConsultarCalendario_Clicked"
+                    x:Name="ConsultarCalendario"
+                    Opacity="60"
+                    BackgroundColor="DarkSlateBlue">
+            </Button>
+            <Button Text="Consultar Horarios"
+                    Clicked="ConsultarHorarios_Clicked"
+                    x:Name="ConsultarHorarios"
+                    BackgroundColor="DarkSlateBlue">
+            </Button>
+            <Button Text="Consultar Ultimas Notas"
+                    Clicked="ConsultarUltimasNotas_Clicked"
+                    x:Name="ConsultarUltimasNotas"
+                    BackgroundColor="DarkSlateBlue">
+            </Button>
+            <Button Text="Consultar Curriculo Academico"
+                    Clicked="ConsultarCurriculoAcademico_Clicked"
+                    x:Name="ConsultarCurriculoAcademico"
+                    BackgroundColor="DarkSlateBlue">
+            </Button>
+            <Button Text="Consultar Propinas"
+                    Clicked="ConsultarPropinas_Clicked"
+                    x:Name="ConsultarPropinas"
+                    BackgroundColor="DarkSlateBlue">
+             </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -27,16 +27,16 @@ namespace EscolaPDMIII
             json.jsonprofessores("http://tomasfernandes.pt/Rest/example/professores");
             json.jsonpropinas("http://tomasfernandes.pt/Rest/example/propinas");
 
-            //login("work@tomasfernandes.pt", "Pass");
+           // login("work@tomasfernandes.pt", "Pass");
 
 
 
         }
 
 
-        async void OnLoginButtonClicked(object sender, EventArgs e)
+        void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            login(usernameEntry.ToString(), passwordEntry.ToString());
+           login(usernameEntry.Text.ToString(), passwordEntry.Text.ToString());
         }
         async void addlogin()
         {

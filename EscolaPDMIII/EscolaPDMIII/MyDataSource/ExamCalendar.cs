@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using EscolaPDMIII.Core;
@@ -10,18 +11,17 @@ namespace EscolaPDMIII.MyDataSource
     public class Exame
     {
 
-        public string Disciplina { get; set; }
-        public string Data { get; set; }
+        public ArrayList Disciplina { get; set; }
+        public ArrayList Data { get; set; }
 
 
         public List<Exame>GetExames()
         {
-            List<Exame> exames = new List<Exame>() 
+
+
+            List<Exame> exames = new List<Exame>()
             {
-              new Exame(){Disciplina ="Matematica",Data = "12/07"},
-              new Exame(){Disciplina ="Portugues",Data = "08/07"},
-              new Exame(){Disciplina ="Historia",Data = "25/12"},
-              new Exame(){Disciplina ="PDMIII",Data = "22/02"}
+                new Exame(){Disciplina = GlogalVar.disciplinaexames,Data = GlogalVar.dataexames}
             };
             return exames;
         }

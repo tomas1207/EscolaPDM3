@@ -9,18 +9,15 @@ namespace EscolaPDMIII.MyDataSource
 {
     public class Propina
     {
-        public string Mes { get; set; }
-        public bool Pago { get; set; }
+        public ArrayList Mes { get; set; }
+        public ArrayList Pago { get; set; }
 
 
         public List<Propina> GetPropinas()
         {
             List<Propina> propinas = new List<Propina>()
             {
-              new Propina(){Mes ="Jan",Pago = true},
-              new Propina(){Mes ="Fev",Pago = false},
-              new Propina(){Mes ="Mar",Pago = false},
-              new Propina(){Mes ="Dez",Pago = true},
+             new Propina(){Mes = Core.GlogalVar.mespropina,Pago = Core.GlogalVar.pagopropinas}
             };
             return propinas;
         }

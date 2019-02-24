@@ -19,6 +19,8 @@ namespace EscolaPDMIII
 
         async void RegistrarUser_Clicked(object sender, EventArgs e)
         {
+            Core.PostonServer poston = new Core.PostonServer();
+           await poston.PostData(EmailEntry.Text, PassEntry.Text, ProfouAlun.Text, "loginpdm");
 
         }
 

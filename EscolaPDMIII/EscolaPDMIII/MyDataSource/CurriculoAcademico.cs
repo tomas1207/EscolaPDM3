@@ -11,18 +11,15 @@ namespace EscolaPDMIII.MyDataSource
     public class Cadeira
     {
 
-        public string Disciplina { get; set; }
-        public int Calificacion { get; set; }
+        public ArrayList Disciplina { get; set; }
+        public ArrayList Calificacion { get; set; }
 
 
         public List<Cadeira> GetCadeiras()
         {
             List<Cadeira> cadeiras = new List<Cadeira>()
             {
-               new Cadeira () {Disciplina="PDMIII",Calificacion=13},
-               new Cadeira () {Disciplina="Historia",Calificacion=17},
-               new Cadeira () {Disciplina="Português",Calificacion=4},
-               new Cadeira () {Disciplina="Matemática",Calificacion=12}
+               new Cadeira(){Disciplina = Core.GlogalVar.nomedisciplina,Calificacion = Core.GlogalVar.notadisciplina}
             };
             return cadeiras;
         }

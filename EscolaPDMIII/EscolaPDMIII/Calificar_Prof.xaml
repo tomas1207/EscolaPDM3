@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EscolaPDMIII.Calificar_Prof">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="10">
+            <Label Text="Introduza uma nota" FontSize="Large">
+                
+            </Label>
+
+            <Picker Title="Selecione aluno" ItemsSource="{Binding Alunos}" x:Name="AlunoPicker"
+                    SelectedIndexChanged="Aluno_SelectedIndexChanged">
+                
+            </Picker>
+            <Entry Text="Introduza a nota" 
+                   x:Name="NotaEntry">
+                
+            </Entry>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

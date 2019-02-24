@@ -17,14 +17,11 @@ namespace EscolaPDMIII.MyDataSource
 
         public List<Exame>GetExames()
         {
-          
-          
+
+
             List<Exame> exames = new List<Exame>()
             {
-              new Exame(){Disciplina ="Matematica",Data = "12/07"},
-              new Exame(){Disciplina ="Portugues",Data = "08/07"},
-              new Exame(){Disciplina ="Historia",Data = "25/12"},
-              new Exame(){Disciplina ="PDMIII",Data = "22/02"}
+                new Exame(){Disciplina = GlogalVar.disciplinaexames,Data = GlogalVar.dataexames}
             };
             return exames;
         }
